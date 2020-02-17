@@ -3,4 +3,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-12"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-annotation-processors-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-chart-customizers-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-chart-themes-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-custom-visualization-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-fonts-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-functions-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-javaflow-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\jasperreports-metadata-6.11.0.jar"/>
+	<classpathentry kind="lib" path="D:\2T\Interfaces\Jaspersoft\Jaspersoft\libs\mysql-connector-java-8.0.18.jar"/>
 </classpath>
