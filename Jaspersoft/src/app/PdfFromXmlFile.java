@@ -14,22 +14,21 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 public class PdfFromXmlFile {
 public static void main(String[] args) throws JRException, IOException {
-// Compile jrxml file.
-JasperReport jasperReport = JasperCompileManager
-.compileReport("C:/jasperreport/StyledTextReport/StyledTextReport.jrxml");
-// Parameters for report Map<String, Object> parameters = new HashMap<String, Object>();
-// DataSource
-// This is simple example, no database.
-// then using empty datasource.
-JRDataSource dataSource = new JREmptyDataSource();
-JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,
-parameters, dataSource);
-// Make sure the output directory exists.
-File outDir = new File("C:/jasperoutput");
-outDir.mkdirs();
-// Export to PDF.
-JasperExportManager.exportReportToPdfFile(jasperPrint,
-"C:/jasperoutput/StyledTextReport.pdf");
-System.out.println("Done!");
-}
+        // Compile jrxml file.
+        JasperReport jasperReport = JasperCompileManager.compileReport("C:\\Users\\dfebrer\\JaspersoftWorkspace\\MyReports\\test.jrxml");
+        // Parameters for report Map<String, Object> parameters = new HashMap<String, Object>();
+        // DataSource
+        // This is simple example, no database.
+        // then using empty datasource.
+        Map<String, Object> parameters = new HashMap<String, Object>();
+        JRDataSource dataSource = new JREmptyDataSource();
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+        // Make sure the output directory exists.
+        File outDir = new File("C:/jasperoutput");
+        outDir.mkdirs();
+        // Export to PDF.
+        JasperExportManager.exportReportToPdfFile(jasperPrint,
+        "D:\\2T\\Interfaces\\StyledTextReport.pdf");
+        System.out.println("Done!");
+    }
 }
