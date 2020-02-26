@@ -20,7 +20,8 @@ import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
 
-public class PdfFromXmlFile {static class MySQLConnUtils {
+public class PdfFromXmlFile {
+    static class MySQLConnUtils {
     public static Connection getMySQLConnection()
             throws ClassNotFoundException, SQLException {
         String hostName = "172.16.26.200";
