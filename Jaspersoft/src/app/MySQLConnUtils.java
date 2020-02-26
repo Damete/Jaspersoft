@@ -3,18 +3,6 @@ package app;
 import java.sql.*;
 
 public class MySQLConnUtils {
-
-    private String IP;
-    private String DB;
-    private String UserName;
-    private String Pass;
-
-    public MySQLConnUtils(String IP, String DB, String UserName, String Pass){
-        this.IP = IP;
-        this.DB = DB;
-        this.UserName = UserName;
-        this.Pass = Pass;
-    }
     
     public static Connection getMySQLConnection() throws ClassNotFoundException, SQLException {
         String hostName = "172.16.26.200";
