@@ -32,25 +32,26 @@ public class Main{
         System.out.println("BEM VINDO AO PROGRAMA");
 
         System.out.println("Por favor introduzca los parametros para realizar la conexión con la base de datos");
-        System.out.println("Dirección IP \n =>");
+        System.out.println("\n Dirección IP \n =>");
         IP = sc.nextLine();
 
-        System.out.println("Nombre de la Base de datos \n =>");
+        System.out.println("\n Nombre de la Base de datos \n =>");
         DB = sc.nextLine();
 
-        System.out.println("Usuario con el que se realizará la conexión");
+        System.out.println("\n Usuario con el que se realizará la conexión \n =>");
         UserName = sc.nextLine();
 
-        System.out.println("Contraseña del usuario proporcionado");
+        System.out.println("\n Contraseña del usuario proporcionado \n =>");
         Pass = sc.nextLine();
 
-        System.out.println("Introduzca la ruta del informe que va a usar como base \n =>");
+        System.out.println("\n Introduzca la ruta del informe que va a usar como base \n =>");
         rutaBase = sc.nextLine();
 
-        System.out.println("En que formato quiere exportar el informe \n" +
+        System.out.println("\n En que formato quiere exportar el informe \n" +
                             "1- PDF \n" +
                             "2- XML \n" +
-                            "3- HTML\n");
+                            "3- HTML\n" +
+                            "=>");
 
         String opcion = sc.nextLine();
         while(iterate){
@@ -61,7 +62,7 @@ public class Main{
                     Map<String, Object> parameters = new HashMap<String, Object>();
                     JasperPrint print = JasperFillManager.fillReport(jasperReport, parameters, conn);
 
-                    System.out.println("Introduzca la ruta en la que quiere que se exporte el fichero");
+                    System.out.println("\n Introduzca la ruta en la que quiere que se exporte el fichero");
                     String rutaExportar = sc.nextLine();
 
                     File outDir = new File(rutaExportar);
@@ -70,15 +71,15 @@ public class Main{
                     ExporterInput exporterInput = new SimpleExporterInput(print);
                     exporter.setExporterInput(exporterInput);
 
-                    System.out.println("Introduzca el nombre que quiere que tenga el fichero");
+                    System.out.println("\n Introduzca el nombre que quiere que tenga el fichero");
                     String nombreFichero = sc.nextLine();
-                    OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput("D:\\2T\\Interfaces\\" + nombreFichero + " ");
+                    OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput("D:\\2T\\Interfaces\\" + nombreFichero + ".pdf");
                     exporter.setExporterOutput(exporterOutput);
                     SimplePdfExporterConfiguration configuration = new SimplePdfExporterConfiguration();
                     exporter.setConfiguration(configuration);
                     exporter.exportReport();
 
-                    System.out.print("Se ha creado el fichero " + nombreFichero+ " con exito");
+                    System.out.print("\n Se ha creado el fichero " + nombreFichero+ " con exito");
 
                     iterate = false;
                 break;
