@@ -11,6 +11,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.engine.export.JRXmlExporter;
 import net.sf.jasperreports.export.ExporterInput;
 import net.sf.jasperreports.export.OutputStreamExporterOutput;
 import net.sf.jasperreports.export.SimpleExporterInput;
@@ -70,7 +71,7 @@ public class Main{
                     JRPdfExporter exporter = new JRPdfExporter();
                     ExporterInput exporterInput = new SimpleExporterInput(print);
                     exporter.setExporterInput(exporterInput);
-
+                    
                     System.out.println("\n Introduzca el nombre que quiere que tenga el fichero");
                     String nombreFichero = sc.nextLine();
                     OutputStreamExporterOutput exporterOutput = new SimpleOutputStreamExporterOutput("D:\\2T\\Interfaces\\" + nombreFichero + ".pdf");
@@ -85,6 +86,18 @@ public class Main{
                 break;
 
                 case "2":
+                    JasperReport Report = JasperCompileManager.compileReport(rutaBase);
+                    Connection conexion = MySQLConnUtils.getMySQLConnection(IP, DB, UserName, Pass);
+                    Map<String, Object> parametros = new HashMap<String, Object>();
+                    JasperPrint output = JasperFillManager.fillReport(jasperReport, parameters, conn);
+
+                    System.out.println("\n Introduzca la ruta en la que quiere que se exporte el fichero");
+                    String Export = sc.nextLine();
+
+                    File ExportRoute = new File(rutaExportar);
+                    outDir.mkdirs();
+                
+                    JRXmlExporter exporter = new JRXmlExporter();
                 break;
 
                 case"3":
